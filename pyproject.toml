@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "framework-test"
+version = "0.1.0"
+description = ""
+authors = ["Diego Miranda <diego.miranda@tre-rn.jus.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+crewai = "^0.108.0"
+langgraph = "^0.3.16"
+langsmith = "^0.3.18"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

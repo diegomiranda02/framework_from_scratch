@@ -1,0 +1,37 @@
+{
+  "engine": "langgraph",
+  "workflow_type": "simple_rag",
+  "description": "This is a RAG workflow.",
+  "prompts": [
+    {
+      "type": "system_prompt",
+      "content": "Initialize the system."
+    },
+    {
+      "type": "hallucination_check_prompt",
+      "content": "Verify the generated content for hallucinations."
+    },
+    {
+      "type": "document_relevancy_prompt",
+      "content": "Assess the relevancy of the document."
+    }
+  ],
+  "additional_attributes": {
+    "retrieval_method": "BM25",
+    "max_tokens": 256,
+    "index_content_sources": [
+      {
+        "id": "ics_1",
+        "url": "https://example.com/doc_chunks_01"
+      },
+      {
+        "id": "ics_2",
+        "url": "https://example.com/pdf_upload_42"
+      },
+      {
+        "id": "ics_3",
+        "url": "https://example.com/kb_article_17"
+      }
+    ]
+  }
+}
